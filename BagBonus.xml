@@ -1,0 +1,156 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Window name="BagBonusCharacterWindowTabs">
+		 	<Windows>
+				<Button name="BagBonusCharacterWindowTabsTemplate" inherits="EA_Button_BottomTab">
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topright" relativeTo="CharacterWindowTabsTimeoutTab">
+						<AbsPoint x="0" y="0" />
+					</Anchor>
+				</Anchors>
+				<EventHandlers>
+					<EventHandler event="OnLButtonUp" function="BagBonus.OnTabSelectBagBonus" />
+				</EventHandlers>
+				<TextOffset x="0" y="5" />
+				</Button>
+          	</Windows>
+        </Window>
+		<Window name="BagBonusCharacterWindowBagBonus" layer="popup">
+			<Anchors>
+				<Anchor point="topleft" relativePoint="topleft" relativeTo="CharacterWindowBackground">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="CharacterWindowBackground">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+			<Windows>
+				<Label name="BagBonusCharacterWindowBagBonusHeader" inherits="EA_Label_DefaultText" font="font_default_text_large" handleinput="false">
+					<Size>
+						<AbsPoint x="500" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="top" relativePoint="top" relativeTo="BagBonusCharacterWindowBagBonus">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<button name="$parentSlotGold" layer="popup" inherits="EA_Button_DefaultIconFrame_Large" handleinput="true">
+			    	<Size>
+				        <AbsPoint x="64" y="64" />
+			        </Size>
+			        <Anchors>
+				        <Anchor point="bottomleft" relativePoint="bottomleft" relativeTo="BagBonusCharacterWindowBagBonusHeader">
+					        <AbsPoint x="20" y="80" />
+				        </Anchor>
+			        </Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="BagBonus.OnMouseOver"/>
+					</EventHandlers>
+			    </button>
+				<Label name="$parentSlotGoldLabel" inherits="EA_Label_DefaultText" font="font_clear_large" textalign="left" handleinput="false" layer="popup">
+					<Size>
+						<AbsPoint x="100" y="64" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSlotGold">
+							<AbsPoint x="10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<button name="$parentSlotPurple" layer="popup" inherits="EA_Button_DefaultIconFrame_Large" handleinput="true">
+			    	<Size>
+				        <AbsPoint x="64" y="64" />
+			        </Size>
+			        <Anchors>
+				        <Anchor point="bottomleft" relativePoint="bottomleft" relativeTo="$parentSlotGold">
+					        <AbsPoint x="0" y="80" />
+				        </Anchor>
+			        </Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="BagBonus.OnMouseOver"/>
+					</EventHandlers>
+			    </button>
+				<Label name="$parentSlotPurpleLabel" inherits="EA_Label_DefaultText" font="font_clear_large" textalign="left" handleinput="false" layer="popup">
+					<Size>
+						<AbsPoint x="100" y="64" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSlotPurple">
+							<AbsPoint x="10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<button name="$parentSlotBlue" layer="popup" inherits="EA_Button_DefaultIconFrame_Large" handleinput="true">
+			    	<Size>
+				        <AbsPoint x="64" y="64" />
+			        </Size>
+			        <Anchors>
+				        <Anchor point="bottomleft" relativePoint="bottomleft" relativeTo="$parentSlotPurple">
+					        <AbsPoint x="0" y="80" />
+				        </Anchor>
+			        </Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="BagBonus.OnMouseOver"/>
+					</EventHandlers>
+			    </button>
+				<Label name="$parentSlotBlueLabel" inherits="EA_Label_DefaultText" font="font_clear_large" textalign="left" handleinput="false" layer="popup">
+					<Size>
+						<AbsPoint x="100" y="64" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSlotBlue">
+							<AbsPoint x="10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<button name="$parentSlotGreen" layer="popup" inherits="EA_Button_DefaultIconFrame_Large" handleinput="true">
+			    	<Size>
+				        <AbsPoint x="64" y="64" />
+			        </Size>
+			        <Anchors>
+				        <Anchor point="bottomleft" relativePoint="bottomleft" relativeTo="$parentSlotBlue">
+					        <AbsPoint x="0" y="80" />
+				        </Anchor>
+			        </Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="BagBonus.OnMouseOver"/>
+					</EventHandlers>
+			    </button>
+				<Label name="$parentSlotGreenLabel" inherits="EA_Label_DefaultText" font="font_clear_large" textalign="left" handleinput="false" layer="popup">
+					<Size>
+						<AbsPoint x="100" y="64" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSlotGreen">
+							<AbsPoint x="10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<button name="$parentSlotWhite" layer="popup" inherits="EA_Button_DefaultIconFrame_Large" handleinput="true">
+			    	<Size>
+				        <AbsPoint x="64" y="64" />
+			        </Size>
+			        <Anchors>
+				        <Anchor point="bottomleft" relativePoint="bottomleft" relativeTo="$parentSlotGreen">
+					        <AbsPoint x="0" y="80" />
+				        </Anchor>
+			        </Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="BagBonus.OnMouseOver"/>
+					</EventHandlers>
+			    </button>
+				<Label name="$parentSlotWhiteLabel" inherits="EA_Label_DefaultText" font="font_clear_large" textalign="left" handleinput="false" layer="popup">
+					<Size>
+						<AbsPoint x="100" y="64" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSlotWhite">
+							<AbsPoint x="10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+		</Window>	
+	</Windows>
+</Interface>
