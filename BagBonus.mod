@@ -2,7 +2,7 @@
 <ModuleFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<UiMod name="BagBonus" version="1.0.0" date="07/04/2025" >
 		<Author name="Psychoxell (Adeptha)" email="" />
-		<Description text="Show the bagbonus in a new character window tab" />
+		<Description text="Show the bag bonus in a new character window tab" />
 		<VersionSettings gameVersion="1.4.8" windowsVersion="1.0"/>
 		<WARInfo>
 			<Categories>

@@ -68,6 +68,16 @@ local function GetTableLng(tbl)
 	return getN
 end
 
+local function HideBagBonus()
+	local WindowName = "BagBonusCharacterWindowBagBonus"
+	if (DoesWindowExist(WindowName)) then
+		WindowSetShowing(WindowName, false) 
+		local WindowName2 = "BagBonusCharacterWindowTabsBagBonusTab"
+		ButtonSetPressedFlag(WindowName2, false)
+ 		ButtonSetStayDownFlag(WindowName2, false)
+	end
+end
+
 -- global functions
 function BagBonus.Initialize()
 	RegisterEventHandler(TextLogGetUpdateEventId("Chat"), "BagBonus.ParseChat")
@@ -108,27 +118,17 @@ function BagBonus.UpdateMode(mode)
 	BagBonus.OldUpdateMode(mode)
 	if (mode) then
 		if (mode == CharacterWindow.MODE_NORMAL) or (mode == CharacterWindow.MODE_BRAGS) or (mode == CharacterWindow.MODE_TIMEOUTS) then
-			BagBonus.HideBagBonus()
+			HideBagBonus()
 		end
 	end
 end
 
 function BagBonus.OnHidden()
 	BagBonus.OldOnHidden()
-	BagBonus.HideBagBonus()
+	HideBagBonus()
 	if (BagBonusOpen) then
 		CharacterWindow.UpdateMode(CharacterWindow.MODE_NORMAL)
 		BagBonusOpen = false
-	end
-end
-
-function BagBonus.HideBagBonus()
-	local WindowName = "BagBonusCharacterWindowBagBonus"
-	if (DoesWindowExist(WindowName)) then
-		WindowSetShowing(WindowName, false) 
-		local WindowName2 = "BagBonusCharacterWindowTabsBagBonusTab"
-		ButtonSetPressedFlag(WindowName2, false)
- 		ButtonSetStayDownFlag(WindowName2, false)
 	end
 end
 
