@@ -7,4 +7,4 @@
 > 
 > | Version  | Description |
 > | ------------- | ------------- |
-> | 1.0.0  | Show the bag bonus in a new character window tab <br>![Version 1.0.0](https://github.com/Makume/BagBonus/blob/6bbe51ae8dd4d1708746e59fc2fae8e25075b116/Images/BagBonus.png)|
+> | 1.0.0  | Show the bag bonus in a new character window tab <br>![Version 1.0.0](https://raw.githubusercontent.com/Makume/BagBonus/23a537f12518e40c21426fdae7c42470e99dd278/Images/BagBonus.png)|
